@@ -1,0 +1,18 @@
+name: "kvstore-consul-app-kt-plugin"
+description: Plugin to configure Consul on project
+types:
+  - app
+languages:
+  - kotlin
+tags:
+  - consul
+inputs:
+  - label: "Consul host: "
+    type: text
+    name: "consul_host"
+    default: "localhost"
+  - label: "Consult port: "
+    type: int
+    name: "consul_port"
+    default: "8500"
+  
