@@ -7,4 +7,4 @@ import org.springframework.context.annotation.Configuration
 @RefreshScope
 @Configuration
 @ConfigurationProperties
-class DynamicRemotePropertiesConfig
+data class DynamicRemotePropertiesConfig(var prop: String? = null)

@@ -1,0 +1,59 @@
+{
+	"info": {
+		"name": "Consul Key Value Store",
+		"description": "Consul Key Value Store API Services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create/Update Consul KV Store Propertie",
+			"request": {
+				"url": "http://localhost:8500/v1/kv/config/{{project_name|to_kebab}}/prop",
+				"method": "PUT",
+				"body": {
+					"mode": "raw",
+					"raw": "prop-value1"
+				},
+				"description": "Create/Update Consul KV Store Propertie"
+			}
+		},
+		{
+			"name": "Read Consul KV Store Propertie",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8500/v1/kv/config/{{project_name|to_kebab}}/prop?raw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8500",
+					"path": [
+						"v1",
+						"kv",
+						"config",
+						"{{project_name|to_kebab}}",
+						"prop"
+					],
+					"query": [
+						{
+							"key": "raw",
+							"value": "",
+							"equals": false,
+							"description": ""
+						}
+					]
+				},
+				"method": "GET",
+				"description": "Read Consul KV Store Propertie"
+			}
+		},
+		{
+			"name": "Read API Propertie Config From Property",
+			"request": {
+				"url": "http://localhost:8080/getConfigFromProperty",
+				"method": "GET",
+				"description": "Read API Propertie Config From Property"
+			}
+		}
+	]
+}
